@@ -1,3 +1,3 @@
 # aprendeIngles
 
-Mamones aqui esta el código :v
+aquí esta el código :v
