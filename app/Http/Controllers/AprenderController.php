@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class AprenderController extends Controller
 {
+  public function __construct(){
+    $this->middleware('auth');
+  }
+
   public function aprenderPalabras(){
     return view('aprender.aprenderPalabras');
   }

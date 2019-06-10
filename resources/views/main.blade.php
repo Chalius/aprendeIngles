@@ -2,8 +2,13 @@
 
 @section('content')
 
-  <h1>¡Bienvenido usuario!</h1>
+  <div class="row justify-content-center">
+    <h1>¡Bienvenido usuario!</h1>
+  </div>
 
-  <h2>El camino al exito es la actitud.</h2>
+  <div class="row justify-content-center">
+    <h2>El camino al exito es la actitud.</h2>
+  </div>
+
 
 @endsection

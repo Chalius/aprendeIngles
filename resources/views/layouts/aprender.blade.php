@@ -27,7 +27,6 @@
       </div>
   </nav>
 
-
   @yield('subcontent')
 
 @endsection
