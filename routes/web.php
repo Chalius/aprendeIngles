@@ -21,6 +21,20 @@ Route::get('/','Welcome2Controller@index');
 
 Route::get('/main','MainController@index');
 
+Route::get('/perfil','MainController@perfil');
+
+Route::get('/aprender','AprenderController@aprenderPalabras');
+
+Route::get('/nosotros','MainController@nosotros');
+
+route::get('/aprender/aprendePalabras','AprenderController@aprenderPalabras');
+
+route::get('/aprender/ejercicios','AprenderController@ejercicios');
+
+route::get('/aprender/examenes','AprenderController@examenes');
+
+route::get('/aprender/loAprendido','AprenderController@loAprendido');
+
 Auth::routes();
 
 #Route::get('/home', 'HomeController@index')->name('home');

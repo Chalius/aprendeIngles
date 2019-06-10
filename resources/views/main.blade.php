@@ -2,6 +2,8 @@
 
 @section('content')
 
-  ¡Una nueva forma de aprender ingles!
+  <h1>¡Bienvenido usuario!</h1>
+
+  <h2>El camino al exito es la actitud.</h2>
 
 @endsection
