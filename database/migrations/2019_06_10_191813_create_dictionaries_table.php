@@ -16,7 +16,7 @@ class CreateDictionariesTable extends Migration
     }
 
 
-    
+
 
     /**
      * Reverse the migrations.

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Dictionary;
 
 class AprenderController extends Controller
 {
@@ -11,7 +12,8 @@ class AprenderController extends Controller
   }
 
   public function aprenderPalabras(){
-    return view('aprender.aprenderPalabras');
+    $words = Dictionary::all();
+    return view('aprender.aprenderPalabras',compact('words'));
   }
 
   public function ejercicios(){

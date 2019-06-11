@@ -6,20 +6,38 @@
   </div>
   <div class="row justify-content-center">
     <table>
-      <tr>
+      <thead>
         <th>Imagen</th>
         <th>Ingles</th>
         <th>Traducción</th>
         <th>Pronunciación</th>
         <th>Mnemotecnia</th>
-      </tr>
-      <tr>
-        <th>imagen</th>
-        <th>Grow</th>
-        <th>Crecer</th>
-        <th>grou</th>
-        <th>Un ogro que no para de crecer</th>
-      </tr>
+      </thead>
+
+      @foreach($words as $word)
+        <tbody>
+          <td>{{$word->img}}</td>
+          <td>{{$word->palabra}}</td>
+          <td>{{$word->traduccion}}</td>
+          <td></td>
+          <td>{{$word->nemotecnia}}</td>
+          {{--
+            <td>{{$word->pronunciacion}}</td> genera problemas en la vista
+          --}}
+
+
+        </tbody>
+      @endforeach
+      <!--
+        <tr>
+          <th>imagen</th>
+          <th>Grow</th>
+          <th>Crecer</th>
+          <th>grou</th>
+          <th>Un ogro que no para de crecer</th>
+        </tr>
+      -->
+
     </table>
   </div>
 @endsection
