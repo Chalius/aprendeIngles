@@ -13,10 +13,6 @@ class CreateDictionariesTable extends Migration
      */
     public function up()
     {
-        Schema::create('dictionaries', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
-        });
     }
 
 

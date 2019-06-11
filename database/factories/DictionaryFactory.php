@@ -13,6 +13,6 @@ $factory->define(Dictionary::class, function (Faker $faker) {
 	        'pronunciacion' =>$faker->words($nb = 3, $asText = false),
 	        'nemotecnia' => $faker->sentence(1),
 	        'traduccion' => $faker->sentence(2),
-	        'img' => $faker->image('public/images', 400, 300, false),
+	        'img' => $faker->image('public/images', 400, 300, null, false)
     ];
 });

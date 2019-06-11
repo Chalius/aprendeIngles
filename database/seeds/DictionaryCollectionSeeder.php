@@ -11,6 +11,6 @@ class DictionaryCollectionSeeder extends Seeder
      */
     public function run()
     {
-         factory(App\Dictionary::class, 8)->create();
+         factory(App\Dictionary::class, 7)->create();
     }
 }
