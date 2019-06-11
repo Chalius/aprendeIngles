@@ -9,8 +9,11 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+   
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +21,8 @@
 
     <!-- Styles -->
     <link href="{{asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+
 
 </head>
 <body>
@@ -32,10 +37,30 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
+                
+                   <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        
+                        <!-- OPCIONES DE NAVEGACION  -->
+                    @auth
+                         <li class="nav-item">
+                            <a class="nav-link" href="{{url('/')}}">Inicio </a>
+                        </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url("/perfil") }}"> Mi perfil </a>
+                        </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link" href="{{ url("/aprender") }}"> Aprender </a>
+                        </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link" href="{{ url("/nosotros") }}"> Sobre nosotros </a>
+                        </li>
+                    @endauth
                     </ul>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -56,6 +81,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -77,5 +103,6 @@
             @yield('content')
         </main>
     </div>
+
 </body>
 </html>
