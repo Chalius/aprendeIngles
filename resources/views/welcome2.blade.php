@@ -1,3 +1,5 @@
+<link href="{{asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
 @extends('layouts.app')
 
 @section('content')
@@ -8,6 +10,7 @@
     ¡Una nueva forma de aprender ingles!<br>
     Registrate o logueate para empezar.
   </div>
+
 
   <div class="row justify-content-center">
     <div class="">

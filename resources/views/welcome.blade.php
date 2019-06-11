@@ -10,8 +10,9 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
+        <link href="{{asset('css/bootstrap.min.css') }}" rel="stylesheet">
         <style>
-            html, body {
+            /*html, body {
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
@@ -60,10 +61,15 @@
 
             .m-b-md {
                 margin-bottom: 30px;
-            }
+            }*/
         </style>
+
+
     </head>
     <body>
+
+
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -96,4 +102,6 @@
             </div>
         </div>
     </body>
+
+
 </html>

@@ -42,6 +42,7 @@ class DictionaryController extends Controller
     public function edit(Dictionary $dictionary)
     {
         //
+        
     }
 
   

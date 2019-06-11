@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{asset('css/bootstrap.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -36,18 +36,25 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                      <a href="{{url('/')}}">INICIO</a>
+                        
+                        <!-- OPCIONES DE NAVEGACION  -->
+                         <li class="nav-item">
+                            <a class="nav-link" href="{{url('/')}}">Inicio </a>
+                        </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url("/perfil") }}"> Mi perfil </a>
+                        </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link" href="{{ url("/aprender") }}"> Aprender </a>
+                        </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link" href="{{ url("/nosotros") }}"> Sobre nosotros </a>
+                        </li>
                     </ul>
-                    <ul class="navbar-nav mr-auto">
-                      <a href="{{ url('/perfil') }}">PERFIL</a> <!--código blade para acceder a otras vistas -->
-                    </ul>
-                    <ul class="navbar-nav mr-auto">
-                      <a href="{{url('/aprender')}}">APRENDER</a>
-                    </ul>
-                    <ul class="navbar-nav mr-auto">
-                      <a href="{{url('/nosotros')}}">NOSOTROS</a>
-                    </ul>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
