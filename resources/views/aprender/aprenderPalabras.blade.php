@@ -13,7 +13,6 @@
         <th>Pronunciación</th>
         <th>Mnemotecnia</th>
       </thead>
-
       @foreach($words as $word)
         <tbody>
           <td>{{$word->img}}</td>
@@ -25,19 +24,12 @@
             <td>{{$word->pronunciacion}}</td> genera problemas en la vista
           --}}
 
-
         </tbody>
       @endforeach
-      <!--
-        <tr>
-          <th>imagen</th>
-          <th>Grow</th>
-          <th>Crecer</th>
-          <th>grou</th>
-          <th>Un ogro que no para de crecer</th>
-        </tr>
-      -->
-
     </table>
   </div>
+  <div class="row justify-content-center">
+  {{$words->links()}}
+  </div>
+
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Dictionary;
+use App\Http\Controllers\Controller; #paginate
 
 class AprenderController extends Controller
 {
@@ -12,7 +13,8 @@ class AprenderController extends Controller
   }
 
   public function aprenderPalabras(){
-    $words = Dictionary::all();
+    #$words = Dictionary::all(); # sin paginación
+    $words = Dictionary::paginate(3);
     return view('aprender.aprenderPalabras',compact('words'));
   }
 
