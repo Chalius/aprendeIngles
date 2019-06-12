@@ -27,11 +27,12 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light  shadow-sm"  style="background-color: #e3f2fd;">
+            <div class="container"  >
                 <!--AQUI SE TIENE QUE INGRESAR LA IMAGEN  <img src="http://placehold.it/150x50?text=Logo" alt="">EN VEZ DEL app.name-->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img src="{{URL::asset('webimages/logo2.png')}}" height="40px" width="40px" style="" class="mx-auto d-block">
+                  
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
