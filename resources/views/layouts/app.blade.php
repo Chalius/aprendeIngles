@@ -9,7 +9,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-   
+
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -31,18 +31,18 @@
             <div class="container"  >
                 <!--AQUI SE TIENE QUE INGRESAR LA IMAGEN  <img src="http://placehold.it/150x50?text=Logo" alt="">EN VEZ DEL app.name-->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{URL::asset('webimages/logo2.png')}}" height="40px" width="40px" style="" class="mx-auto d-block">
-                  
+                    <img src="{{URL::asset('webimages/minilogo.png')}}" height="40px" width="40px" style="" class="mx-auto d-block">
+
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                
+
                    <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        
+
                         <!-- OPCIONES DE NAVEGACION  -->
                     @auth
                          <li class="nav-item">
@@ -56,7 +56,7 @@
                          <li class="nav-item">
                             <a class="nav-link" href="{{ url("/nosotros") }}"> Sobre nosotros </a>
                         </li>
-  
+
 
                         <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -64,19 +64,19 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    
+
                                    <a class="nav-link" href="{{url('/aprender/aprendePalabras')}}">Aprende palabras </a>
-                             
+
                                     <a class="nav-link" href="{{ url('/aprender/ejercicios') }}">Ejercicios </a>
-                           
+
                                     <a class="nav-link" href="{{url('/aprender/examenes')}}">Exámenes </a>
-                    
+
                                     <a class="nav-link" href="{{url('/aprender/loAprendido')}}">Lo aprendido </a>
                                 </div>
                         </li>
 
 
-       
+
                     @endauth
                     </ul>
 
@@ -100,7 +100,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

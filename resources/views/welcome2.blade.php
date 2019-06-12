@@ -4,16 +4,16 @@
 @section('content')
 
     <div class="container" style="background-color: rgb(255, 255, 255);">
-      
+
 
       <div class="jumbotron" style="background-color: rgb(255, 255, 255);">
-        <img src="{{URL::asset('webimages/index.png')}}" height="auto" width="75%" style="display: inline; position: static; float: none; text-align: center"  class="mx-auto d-block">
+        <img src="{{URL::asset('webimages/logo.png')}}" height="auto" width="75%" style="display: inline; position: static; float: none; text-align: center"  class="mx-auto d-block">
         <h1 class="display-3"><div class="container" style="">
-  
+
         </div>
         <h1 style="text-align: center">Una nueva forma de aprender Ingles</h1>
         <p></p>
- 
+
       <div class="row" style="border:  1px dashed rgb(66, 133, 244); text-align: center;">
 
         <div class="col-sm-4">
@@ -38,16 +38,16 @@
 
 
       <footer class="footer" style="background-color: rgb(255, 255, 255);">
-       
+
         <img src="{{URL::asset('webimages/footer.png')}}" height="180px" max-width="auto" style="img-fluid">
         <img src="{{URL::asset('webimages/footer.png')}}" height="180px" max-width="auto" style="img-fluid">
         <img src="{{URL::asset('webimages/footer.png')}}" height="180px" max-width="auto" style="img-fluid">
 
       </footer>
 
-   
+
   </div> <!-- /container -->
-  
+
 
 
 @endsection
