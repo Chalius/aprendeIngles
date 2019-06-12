@@ -54,12 +54,29 @@
                         </li>
 
                          <li class="nav-item">
-                            <a class="nav-link" href="{{ url("/aprender") }}"> Aprender </a>
-                        </li>
-
-                         <li class="nav-item">
                             <a class="nav-link" href="{{ url("/nosotros") }}"> Sobre nosotros </a>
                         </li>
+  
+
+                        <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{  __('Aprender')  }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    
+                                   <a class="nav-link" href="{{url('/aprender/aprendePalabras')}}">Aprende palabras </a>
+                             
+                                    <a class="nav-link" href="{{ url('/aprender/ejercicios') }}">Ejercicios </a>
+                           
+                                    <a class="nav-link" href="{{url('/aprender/examenes')}}">Exámenes </a>
+                    
+                                    <a class="nav-link" href="{{url('/aprender/loAprendido')}}">Lo aprendido </a>
+                                </div>
+                        </li>
+
+
+       
                     @endauth
                     </ul>
 

@@ -1,12 +1,14 @@
-@extends('layouts.aprender')
+@extends('layouts.app')
 
-@section('subcontent')
+@section('content')
+
+<div class="container">
   <div class="row justify-content-center">
     <h1>Aprende palabras</h1>
   </div>
   <div class="row justify-content-center">
-    <table>
-      <thead>
+    <table class="table table-hover">
+      <thead class="thead-light">
         <th>Imagen</th>
         <th>Ingles</th>
         <th>Traducción</th>
@@ -28,6 +30,7 @@
       @endforeach
     </table>
   </div>
+</div>
   <div class="row justify-content-center">
   {{$words->links()}}
   </div>

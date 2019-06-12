@@ -1,6 +1,6 @@
-@extends('layouts.aprender')
+@extends('layouts.app')
 
-@section('subcontent')
+@section('content')
   <div class="row justify-content-center">
     <h1>Lo aprendido</h1>
   </div>
