@@ -29,6 +29,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+                <!--AQUI SE TIENE QUE INGRESAR LA IMAGEN  <img src="http://placehold.it/150x50?text=Logo" alt="">EN VEZ DEL app.name-->
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -105,4 +106,5 @@
     </div>
 
 </body>
+
 </html>
