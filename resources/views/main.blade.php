@@ -2,14 +2,13 @@
 
 @section('content')
 
-  <div class="row justify-content-center">
-    <h1>¡Bienvenido usuario!</h1>
 
-  </div>
 
-  <div class="row justify-content-center">
-    <h2>El camino al exito es la actitud.</h2>
-  </div>
+   <div class="container justify-content-center" style="background-color: rgb(255, 255, 255);">
+   	<img src="{{URL::asset('webimages/actitud.png')}}" height="100%" width="100%" style="" class="mx-auto d-block">
+
+
+   </div>
 
 
 @endsection
