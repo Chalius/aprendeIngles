@@ -17,10 +17,13 @@ class DictionaryController extends Controller
 
     public function index()
     {
-        $dictionary = Dictionary::all();
-        return view('POR INDICAR VISTA', compact('dictionaries'));
+        $words = Dictionary::all();
+        return view('administrar.editar', compact('words'));
 
     }
+
+
+
 
     public function create()
     {
