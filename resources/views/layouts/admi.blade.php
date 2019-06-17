@@ -23,7 +23,6 @@
     <link href="{{asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
 
-
 </head>
 <body>
     <div id="app">
@@ -58,8 +57,6 @@
                         </li>
 
 
-
-
                         <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{  __('Aprender')  }} <span class="caret"></span>
@@ -80,9 +77,6 @@
 
 
                     @endauth
-
-            
-
                     </ul>
 
 

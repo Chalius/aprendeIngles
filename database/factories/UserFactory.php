@@ -26,6 +26,7 @@ $factory->define(User::class, function (Faker $faker) {
         'edad' => $faker->randomNumber(2),
         'remember_token' => Str::random(10),
         'notas' => '1' . $faker-> randomNumber(1),
+        'type'  => 'default',
     ];
 });
 

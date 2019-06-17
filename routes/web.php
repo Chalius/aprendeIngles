@@ -18,8 +18,18 @@ Route::get('/', function () {
 */
 
 Route::get('/','Welcome2Controller@index');
+#aqui abajo habia un MainController@index
+Route::get('/main',function(){
+	$user=Auth::user();
+	if($user->esAdmin()){
+		return view ('/admin');
+	}else{
+		return view ('/main');
+	}
+	
+});
 
-Route::get('/main','MainController@index');
+
 
 Route::get('/perfil','MainController@perfil');
 
@@ -49,4 +59,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 #Rutas del administrador
-Route::get('/administrar/editar', 'DictionaryController@index');
+Route::get('/admin', 'DictionaryController@index')
+	->middleware('is_admin')
+	->name('admin');

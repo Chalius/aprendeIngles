@@ -24,6 +24,7 @@ class User extends Authenticatable
         'edad',
         'notas',
         'sesiones',
+        'type',
     ];
 
     /**
@@ -43,4 +44,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+#FIJANDO UNA CONSTANTE Y FUNCION PARA QUE SE PUEDA VERIFICAR COMO ADMINISTRADOR
+    const ADMIN_TYPE = 'admin';
+    const DEFAULT_TYPE = 'default';
+
+/**ESTE ERA CODIGO DE OTRO EJERCICIO
+    public function isAdmin()
+    {
+        return $this->type === self::ADMIN_TYPE;
+    }
+    **/
+
+#FUNCION QUE VALIDA EN ROUTES:PHP
+    public function esAdmin(){
+        if ($this->type == 'admin'){
+            return true;
+        }
+    return false;
+    }
 }
+
