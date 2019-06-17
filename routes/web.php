@@ -30,7 +30,6 @@ Route::get('/main',function(){
 });
 
 
-
 Route::get('/perfil','MainController@perfil');
 
 Route::get('/aprender','AprenderController@aprenderPalabras');
@@ -62,3 +61,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'DictionaryController@index')
 	->middleware('is_admin')
 	->name('admin');
+
+
+Route::get('/administrar/editar','DictionaryController@edit');
+
+Route::get('/administrar/listar','DictionaryController@listar');
+
+Route::get('/administrar/agregar','DictionaryController@agregar')->name('agregar');
+
+Route::get('/administrar/buscar','DictionaryController@agregar');
+
+Route::post('/administrar/agregar','DictionaryController@store');

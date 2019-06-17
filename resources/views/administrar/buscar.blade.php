@@ -1,4 +1,4 @@
-estas en editar palabra
+estas en buscar palabra
 
 @extends('layouts.admi')
 
@@ -22,6 +22,3 @@ estas en editar palabra
 </div>
 			
 @endsection
-
-
-
