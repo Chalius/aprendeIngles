@@ -18,12 +18,14 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'gender',
+        'age',
+        'telefono',
+        'notes',
         'email',
         'password',
-        'telefono',
-        'edad',
-        'notas',
-        'sesiones',
+
+        'aprendidas',
         'type',
     ];
 
@@ -63,5 +65,10 @@ class User extends Authenticatable
         }
     return false;
     }
-}
 
+    public function aprendidas()
+    {
+        return $this->hasMany('App\Aprendidas');
+    }
+
+}

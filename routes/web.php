@@ -26,7 +26,7 @@ Route::get('/main',function(){
 	}else{
 		return view ('/main');
 	}
-	
+
 });
 
 
@@ -36,13 +36,17 @@ Route::get('/aprender','AprenderController@aprenderPalabras');
 
 Route::get('/nosotros','MainController@nosotros');
 
-route::get('/aprender/aprendePalabras','AprenderController@aprenderPalabras');
+route::get('/aprender/aprendePalabras','AprenderController@aprenderPalabras')->name("aprendePalabras");
 
 route::get('/aprender/ejercicios','AprenderController@ejercicios');
 
 route::get('/aprender/examenes','AprenderController@examenes');
 
 route::get('/aprender/loAprendido','AprenderController@loAprendido');
+
+
+Route::get('aprendido','AprendidasController@store');
+
 
 Auth::routes();
 
