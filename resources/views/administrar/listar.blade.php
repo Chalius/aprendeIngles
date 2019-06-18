@@ -24,6 +24,8 @@
 					        <th>Traducción</th>
 					        <th>Pronunciación</th>
 					        <th>Mnemotecnia</th>
+					        <th>Accion</th>
+
 					      </thead>
 					      @foreach($words as $word)
 					        <tbody>
@@ -32,6 +34,16 @@
 					          <td>{{$word->traduccion}}</td>
 					          <td>{{$word->pronunciacion}}</td>
 					          <td>{{$word->nemotecnia}}</td>
+					          <td>
+					          	<form action="{{ action('DictionaryController@destroy', $word->id) }}" method="POST">
+		
+									@csrf
+							        @method('DELETE')
+							        <button class="btn btn-danger float-right" type="submit">Eliminar</button>
+
+					          	</form>
+					          </td>
+
 
 					        </tbody>
 					      @endforeach

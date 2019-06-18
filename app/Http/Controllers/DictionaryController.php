@@ -81,10 +81,17 @@ class DictionaryController extends Controller
     }
 
  
-    public function destroy(Dictionary $dictionary)
+
+    public function destroy($id)
     {
-        //
+        $dictionary = Dictionary::find($id);
+        $dictionary->delete();
+        return redirect()->action('DictionaryController@listar');
+ 
     }
+
+
+
 
     #RUTAS DEL ADMINISTRADOR
 

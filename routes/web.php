@@ -78,3 +78,14 @@ Route::get('/administrar/agregar/success', 'DictionaryController@success')->name
 
 #Ruta de busqueda search
 Route::get('/administrar/search', 'DictionaryController@search')->name('search');
+
+#Ruta de destruir palabra de diccionario
+Route::delete('/dicionaries/{id}/delete', 'DictionaryController@destroy')->name('dictionary.destroy');
+
+
+#Rutas para editar usuario admin
+Route::get('/user/{id}/edit', 'UserController@edit');
+
+Route::patch('/user/{id}/edit', 'UserController@update');
+
+Route::delete('/user/{id}/delete', 'UserController@destroy');
