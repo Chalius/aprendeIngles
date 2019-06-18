@@ -5,19 +5,28 @@
 
 <div class="container">
 	<div class="row justify-content-center"> 
-		<div class="col-md-12">
-	
-			<div class="page-header">
-				<h1 class="text-center">
-					Bienvenido administrador! <small>Utiliza esta interfaz para modificar las palabras disponibles en la aplicacion</small>
-				</h1>
-				<p></p>
-			</div>
 
-			<div>
-				<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="rounded" />
-				<hr>
-					<table class="table table-hover" >
+
+
+					<div class="tab-pane" id="tab3">
+						<nav class="navbar navbar-light bg-light justify-content-center">
+
+						  <form class="form-inline" action="{{ route('search')}}" method="GET" >
+
+						    <input class="form-control mr-sm-2" type="text" placeholder="Palabra a buscar" id="query" name="query" value="{{ request()->input('query') }}">
+
+						    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+						  </form>
+						</nav>
+					</div>
+
+
+					<div class="search-container container">
+						<h1>Resultados de busqueda</h1>
+						<p>{{ $words->count() }} resultado(s) para '{{ request()->input('query') }}'</p>
+
+			
+						<table class="table table-hover" >
 					      <thead class="thead-light">
 					        <th>Imagen</th>
 					        <th>Ingles</th>
@@ -35,8 +44,10 @@
 
 					        </tbody>
 					      @endforeach
-			</div>
-		</div>
+
+					</div>
+
 	</div>
 </div>
+			
 @endsection

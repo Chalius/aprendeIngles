@@ -69,9 +69,12 @@ Route::get('/administrar/listar','DictionaryController@listar');
 
 Route::get('/administrar/agregar','DictionaryController@agregar')->name('agregar');
 
-Route::get('/administrar/buscar','DictionaryController@agregar');
+Route::get('/administrar/buscar','DictionaryController@buscar')->name('buscar');
 
 Route::post('/administrar/agregar','DictionaryController@store');
 
 #Ruta de success
 Route::get('/administrar/agregar/success', 'DictionaryController@success')->name('success');
+
+#Ruta de busqueda search
+Route::get('/administrar/search', 'DictionaryController@search')->name('search');

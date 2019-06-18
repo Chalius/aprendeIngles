@@ -111,5 +111,13 @@ class DictionaryController extends Controller
         return view('administrar.success');
     }
 
+    public function search(Request $request){
+
+        $query = $request->input('query');
+
+        $words = Dictionary::where('palabra', 'like' , "%$query%")->get();
+        return view ('administrar.searchresult')->with('words', $words);
+    }
+
 
 }
