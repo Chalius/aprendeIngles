@@ -35,24 +35,31 @@ class DictionaryController extends Controller
         
         $request->validate([
             'palabra' => 'required:max20' ,
+            'traduccion' => 'required:max30' ,
             'img' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
         $img = $request->file('img');
         $imgName = time().$img->getClientOriginalName();
         $palabra = $request->get('palabra');
+        $pronunciacion = $request->get('pronunciacion');
+        $nemotecnia = $request->get('nemotecnia');
+        $traduccion = $request->get('traduccion');
 
         $dictionary = new Dictionary();
         $dictionary->palabra = $palabra;
+        $dictionary->pronunciacion = $pronunciacion;
+        $dictionary->nemotecnia = $nemotecnia;
+        $dictionary->traduccion = $traduccion;
         $dictionary->img = $imgName;
 
         $request->img->move(public_path('images'), $imgName);
-
         $dictionary->save();
 
-        return redirect()->route('agregar');
+        return redirect()->route('success');
 
     }
+
 
   
     public function show(Dictionary $dictionary)
@@ -91,7 +98,6 @@ class DictionaryController extends Controller
     public function agregar()
     {
         return view('administrar.agregar');
-
     }
 
     public function buscar()
@@ -99,6 +105,10 @@ class DictionaryController extends Controller
     
     return view('administrar.buscar');
 
+    }
+
+    public function success(){
+        return view('administrar.success');
     }
 
 

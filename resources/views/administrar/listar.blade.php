@@ -30,7 +30,7 @@
 					          <td>{{$word->img}}</td>
 					          <td>{{$word->palabra}}</td>
 					          <td>{{$word->traduccion}}</td>
-					          <td></td>
+					          <td>{{$word->pronunciacion}}</td>
 					          <td>{{$word->nemotecnia}}</td>
 
 					        </tbody>

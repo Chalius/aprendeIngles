@@ -72,3 +72,6 @@ Route::get('/administrar/agregar','DictionaryController@agregar')->name('agregar
 Route::get('/administrar/buscar','DictionaryController@agregar');
 
 Route::post('/administrar/agregar','DictionaryController@store');
+
+#Ruta de success
+Route::get('/administrar/agregar/success', 'DictionaryController@success')->name('success');
