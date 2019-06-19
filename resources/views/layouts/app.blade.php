@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
 
-  <!-- BOOTSTRAP DESCARGADO DE AQUAMARINE 
+  <!-- BOOTSTRAP DESCARGADO DE AQUAMARINE
   <link href="{{asset('plugins/aquamarine.css') }}" rel="stylesheet">
   -->
 
@@ -17,10 +17,10 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container">
-   
+
 
     <a class="navbar-brand" href="{{ url('/') }}">
-        <img src="{{URL::asset('webimages/minilogo.png')}}" height="40px" width="40px" style="" class="mx-auto d-block">  
+        <img src="{{URL::asset('webimages/minilogo.png')}}" height="40px" width="40px" style="" class="mx-auto d-block">
     </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -126,9 +126,9 @@
   <div class="py-3 bg-light">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-6 p-3"> 
+        <div class="col-lg-4 col-6 p-3">
 
-                <img src="{{URL::asset('webimages/logo.png')}}" height="100px" width="auto" style="" class="mx-auto d-block">  
+                <img src="{{URL::asset('webimages/logo.png')}}" height="100px" width="auto" style="" class="mx-auto d-block">
         </div>
         <div class="col-lg-4 col-6 p-3">
           <p><a href="" target="_blank">Bustamante y Rivero, 410&nbsp;<br>Arequipa, PERU</a></p>
@@ -154,5 +154,3 @@
 
 
 </html>
-
- 
