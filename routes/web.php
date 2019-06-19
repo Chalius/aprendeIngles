@@ -51,6 +51,8 @@ Route::get('/nosotros','MainController@nosotros');
 
 #FIN APRENDER
 
+
+
 Auth::routes();
 
 #Route::get('/home', 'HomeController@index')->name('home');
