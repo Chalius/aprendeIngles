@@ -39,14 +39,9 @@
                       <a class="nav-link text-dark" href="{{url('/aprender/loAprendido')}}">Lo aprendido </a>
                   </div>
           </li>
-
-
-
       @endauth
 
       </ul>
-
-
       <!-- Right Side Of Navbar -->
       <ul class="navbar-nav ml-auto">
           <!-- Authentication Links -->
@@ -87,3 +82,5 @@
     </div>
   </div>
 </nav>
+<div class="py-3 bg-primary">
+</div>

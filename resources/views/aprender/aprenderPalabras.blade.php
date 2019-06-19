@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="py-5">
   <div class="container">
     <div class="row justify-content-center">
       <h1>Aprende palabras</h1>
@@ -31,20 +31,15 @@
 
               </tbody>
             @endforeach
-
         </table>
-
     </div>
   </div>
 
   <div class="row justify-content-center">
-  </div>
-
+  
   {{-- formulario para el boton "aprendido!""--}}
 
-
   <?php
-
   #$array = [];
   $array[]=array();
   foreach ($words as $word) {
@@ -52,8 +47,6 @@
   };
 
    ?>
-
-
 
   <form action="{{ action('AprendidasController@store', ['ids' => $array]) }}" method="post" enctype="multipart/form-data">
     @csrf
@@ -69,6 +62,8 @@
   @else
     <h3>Ya no quedan más palabras para estudiar :o</h3>
   @endif
+  </div>
 
-
+</div>
+</div>
 @endsection

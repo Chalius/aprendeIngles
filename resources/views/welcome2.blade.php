@@ -1,17 +1,19 @@
 
-
-
 @extends('layouts.app')
 
 @section('content')
-
-
+<div class="py-5" >
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="carousel slide" data-ride="carousel" id="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
+<<<<<<< HEAD
                 <img class="d-block img-fluid w-100" src="{{URL::asset('webimages/index.png')}}"  style="">
+=======
+                <img class="d-block img-fluid w-100" src="{{URL::asset('webimages/indexa.png')}}" height="500" width="500"  style="">
+>>>>>>> origin/master
               </div>
               <div class="carousel-item">
                 <img class="d-block img-fluid w-100" src="{{URL::asset('webimages/aprende1.png')}}"  >
@@ -67,6 +69,6 @@
         </div>
       </div>
 
-
-
+  </div>
+</div>
 @endsection
