@@ -11,16 +11,16 @@
           <div class="carousel slide" data-ride="carousel" id="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block img-fluid w-100" src="{{URL::asset('webimages/index.png')}}" height="500" width="500"  style="">
+                <img class="d-block img-fluid w-100" src="{{URL::asset('webimages/index.png')}}"  style="">
               </div>
               <div class="carousel-item">
-                <img class="d-block img-fluid w-100" src="{{URL::asset('webimages/aprende1.png')}}" height="500" width="500" >
+                <img class="d-block img-fluid w-100" src="{{URL::asset('webimages/aprende1.png')}}"  >
                 <div class="carousel-caption">
 
                 </div>
               </div>
               <div class="carousel-item">
-                <img class="d-block img-fluid w-100" src="{{URL::asset('webimages/aprende2.png')}}" height="500" width="500" >
+                <img class="d-block img-fluid w-100" src="{{URL::asset('webimages/aprende2.png')}}"  >
                 <div class="carousel-caption">
                 </div>
               </div>
