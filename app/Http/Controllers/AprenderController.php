@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Dictionary;
+use App\User;
 use App\Http\Controllers\Controller; #paginate
 
 class AprenderController extends Controller
@@ -31,7 +33,10 @@ class AprenderController extends Controller
   }
 
   public function loAprendido(){
-    return view('aprender.loAprendido');
+    $user=User::find(Auth::id());
+    $aprendidas=$user->aprendidas;
+    $diccionario=Dictionary::where('palabra','=','casa');
+    return view('aprender.loAprendido',compact('aprendidas'));
   }
 
 

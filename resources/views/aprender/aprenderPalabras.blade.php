@@ -33,23 +33,33 @@
   </div>
 
   <div class="row justify-content-center">
-  {{--$words->links()--}}
   </div>
 
   {{-- formulario para el boton "aprendido!""--}}
-  <form action="{{ action('AprendidasController@store') }}" method="get" enctype="multipart/form-data">
+
+
+  <?php
+
+  #$array = [];
+  $array[]=array();
+  foreach ($words as $word) {
+    array_push($array,$word->palabra);
+  };
+
+   ?>
+
+
+
+  <form action="{{ action('AprendidasController@store', ['palabras' => $array]) }}" method="post" enctype="multipart/form-data">
+    @csrf
     <div class="row justify-content-center" >
       <h6>Repasa estas palabras usando las nemotecnias <br> y cuando termines usa este boton.</h6>
-
-      <input name="" value="{{$words}}" > {{-- style="display:none" --}}
     </div>
     <div class="row justify-content-center">
         <button type="submit" class="btn btn-primary">Aprendido!</button>
     </div>
   </form>
 
-  <div class="">
 
-  </div>
 
 @endsection

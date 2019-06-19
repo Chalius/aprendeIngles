@@ -68,7 +68,7 @@ class User extends Authenticatable
 
     public function aprendidas()
     {
-        return $this->hasMany('App\Aprendidas');
+        return $this->embedsMany('App\Aprendidas');
     }
 
 }

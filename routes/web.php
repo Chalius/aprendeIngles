@@ -36,7 +36,8 @@ Route::get('/aprender','AprenderController@aprenderPalabras');
 
 Route::get('/nosotros','MainController@nosotros');
 
-route::get('/aprender/aprendePalabras','AprenderController@aprenderPalabras')->name("aprendePalabras");
+Route::get('/aprender/aprendePalabras','AprenderController@aprenderPalabras')->name("aprendePalabras");
+Route::post('/aprender/aprendePalabras','AprenderController@aprenderPalabras')->name("aprendePalabras1");
 
 route::get('/aprender/ejercicios','AprenderController@ejercicios');
 
@@ -45,7 +46,7 @@ route::get('/aprender/examenes','AprenderController@examenes');
 route::get('/aprender/loAprendido','AprenderController@loAprendido');
 
 
-Route::get('aprendido','AprendidasController@store');
+Route::post('aprendido','AprendidasController@store');
 
 
 Auth::routes();

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Aprendidas;
+use App\User;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Dictionary;
@@ -41,38 +42,21 @@ class AprendidasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Dictionary $words) #ARREGLANDO
+    public function store(Request $request) #ARREGLANDO
     {
       //Funcion llamada por el boton "aprendido!"
-      $learned=new Aprendidas();
-      #$ids=array();
-      #foreach ($words as $word) {
-        #array_push($ids,$word->get('_id'));
-        $learned->palabra = $words;
-        $learned->save();
-      #}
 
+      $user=User::find(auth()->id());
+      $words=$request->get('palabras');
+    //  dd($words);
 
-      #$learned->idPalabra1=$request->get('idPalabra');
-      #$learned->fechaRepaso1=\Carbon::now();
+      foreach ($words as $word) {
+        $learned=new Aprendidas();
+        $learned->palabra = $word;
 
-      #$learned->save();
-      /*
-      $learned->idPalabra2=$request->get('idPalabra');
-      $learned->fechaRepaso2=$request->now();
-
-      $learned->idPalabra3=$request->get('idPalabra');
-      $learned->fechaRepaso3=$resquest->now();
-
-      $learned->idPalabra4=$request->get('idPalabra');
-      $learned->fechaRepaso4=$request->now();
-
-      $learned->idPalabra5=$request->get('idPalabra');
-      $learned->fechaRepaso5=$request->now();
-      */
-
+        $user->aprendidas()->save($learned);
+      }
       return redirect()->route('aprendePalabras');
-
     }
 
     /**
