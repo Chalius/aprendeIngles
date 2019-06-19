@@ -43,14 +43,14 @@
   #$array = [];
   $array[]=array();
   foreach ($words as $word) {
-    array_push($array,$word->palabra);
+    array_push($array,$word->id);
   };
 
    ?>
 
 
 
-  <form action="{{ action('AprendidasController@store', ['palabras' => $array]) }}" method="post" enctype="multipart/form-data">
+  <form action="{{ action('AprendidasController@store', ['ids' => $array]) }}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="row justify-content-center" >
       <h6>Repasa estas palabras usando las nemotecnias <br> y cuando termines usa este boton.</h6>

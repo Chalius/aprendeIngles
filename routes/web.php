@@ -32,22 +32,24 @@ Route::get('/main',function(){
 
 Route::get('/perfil','MainController@perfil');
 
-Route::get('/aprender','AprenderController@aprenderPalabras');
-
 Route::get('/nosotros','MainController@nosotros');
 
-Route::get('/aprender/aprendePalabras','AprenderController@aprenderPalabras')->name("aprendePalabras");
-Route::post('/aprender/aprendePalabras','AprenderController@aprenderPalabras')->name("aprendePalabras1");
+#APRENDER
 
-route::get('/aprender/ejercicios','AprenderController@ejercicios');
+	Route::get('/aprender','AprenderController@aprenderPalabras');
 
-route::get('/aprender/examenes','AprenderController@examenes');
+	Route::get('/aprender/aprendePalabras','AprenderController@aprenderPalabras')->name("aprendePalabras");
+	#Route::post('/aprender/aprendePalabras','AprenderController@aprenderPalabras')->name("aprendePalabras1"); #borrar
 
-route::get('/aprender/loAprendido','AprenderController@loAprendido');
+	route::get('/aprender/ejercicios','AprenderController@ejercicios');
 
+	route::get('/aprender/examenes','AprenderController@examenes');
 
-Route::post('aprendido','AprendidasController@store');
+	route::get('/aprender/loAprendido','AprenderController@loAprendido');
 
+	Route::post('aprendido','AprendidasController@store');
+
+#FIN APRENDER
 
 Auth::routes();
 
