@@ -94,6 +94,10 @@ Route::get('/usuario/search', 'DictionaryController@searchUsuario')->name('usuar
 #Ruta de destruir palabra de diccionario
 Route::delete('/dicionaries/{id}/delete', 'DictionaryController@destroy')->name('dictionary.destroy');
 
+#Ruta para editar palabra
+Route::patch('/administrar/{id}', 'DictionaryController@update')->name('dictionary.update');
+Route::get('/administrar/{id}/edit', 'DictionaryController@edit')->name('dictionary.edit');
+
 
 #Rutas para editar usuario admin
 Route::get('/user/{id}/edit', 'UserController@edit');

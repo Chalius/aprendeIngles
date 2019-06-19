@@ -9,6 +9,11 @@
             <ul class="navbar-nav mr-auto">
                <!-- OPCIONES DE NAVEGACION  -->
                @auth
+
+               <li class="nav-item">
+                    <a class="nav-link text-white" href="{{url("/main")}}">Inicio </a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{url("/administrar/listar")}}">Listar palabras </a>
                 </li>

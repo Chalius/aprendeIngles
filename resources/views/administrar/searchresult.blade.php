@@ -64,11 +64,15 @@
                       <td class="align-middle">{{$word->pronunciacion}}</td>
                       <td class="align-middle">{{$word->nemotecnia}}</td>
                       <td class="align-middle">
+                          <a href="/administrar/{{$word->id}}/edit" class="btn btn-outline-primary ">Editar</a>
+                          <p></p>
+                          <hr>
                           <form action="{{ action('DictionaryController@destroy', $word->id) }}" method="POST">
                               @csrf
                               @method('DELETE')
-                              <button class="btn btn-danger float-right" type="submit">Eliminar</button>
+                              <button class="btn btn-secondary" type="submit">Eliminar</button>
                           </form>
+
                       </td>
                   </tr>
 

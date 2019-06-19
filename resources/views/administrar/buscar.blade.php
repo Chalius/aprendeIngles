@@ -3,7 +3,8 @@
 
 @section('content')
 
-<div class="py-5 text-center" style="background-image: url('https://www.lemaydigital.com/wp-content/uploads/2018/02/great-feature-image-800x400.jpg');background-size:cover;">
+<div class="py-5 text-center" style="background-image: url({{URL::asset('webimages/primer.png')}});background-size:cover;">
+
   <div class="container">
     <div class="row">
       <div class="bg-white p-5 mx-auto col-md-8 col-10">

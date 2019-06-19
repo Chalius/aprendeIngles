@@ -68,16 +68,41 @@ class DictionaryController extends Controller
     }
 
  
-    public function edit(Dictionary $dictionary)
+    public function edit($id)
     {
-        return view('administrar.editar');
+        $word = Dictionary::find($id);
+        #FALTA EDITAR
+        return view('administrar.editar')->with('word',$word);
         
     }
 
   
-    public function update(Request $request, Dictionary $dictionary)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'palabra' => 'required:max20' ,
+            'traduccion' => 'required:max30' ,
+            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+        ]);
+
+        $img = $request->file('img');
+        $imgName = time().$img->getClientOriginalName();
+        $palabra = $request->get('palabra');
+        $pronunciacion = $request->get('pronunciacion');
+        $nemotecnia = $request->get('nemotecnia');
+        $traduccion = $request->get('traduccion');
+
+        $dictionary = Dictionary::find($id);
+        $dictionary->palabra = $palabra;
+        $dictionary->pronunciacion = $pronunciacion;
+        $dictionary->nemotecnia = $nemotecnia;
+        $dictionary->traduccion = $traduccion;
+        $dictionary->img = $imgName;
+
+        $request->img->move(public_path('images'), $imgName);
+        $dictionary->save();
+#Ruta faltante
+        return redirect('/administrar/listar')->with('success','Palabra actualizada');
     }
 
  

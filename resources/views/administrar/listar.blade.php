@@ -2,7 +2,9 @@
 @extends('layouts.admi')
 
 @section('content')
-<div class="py-5 text-center" style="background-image: url('https://www.lemaydigital.com/wp-content/uploads/2018/02/great-feature-image-800x400.jpg');background-size:cover;" >
+<div class="py-5 text-center" style="background-image: url({{URL::asset('webimages/primer.png')}});background-size:cover;" >
+
+
     <div class="container">
       <div class="row">
         <div class="bg-white p-5 mx-auto col-md-8 col-10">
@@ -44,11 +46,15 @@
                     <td class="align-middle">{{$word->pronunciacion}}</td>
                     <td class="align-middle">{{$word->nemotecnia}}</td>
                     <td class="align-middle">
+                        <a href="/administrar/{{$word->id}}/edit" class="btn btn-outline-primary ">Editar</a>
+                        <p></p>
+                        <hr>
                         <form action="{{ action('DictionaryController@destroy', $word->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger float-right" type="submit">Eliminar</button>
+                            <button class="btn btn-secondary" type="submit">Eliminar</button>
                         </form>
+
                     </td>
                 </tr>
 
