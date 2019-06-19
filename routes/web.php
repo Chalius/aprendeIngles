@@ -51,9 +51,14 @@ Route::get('/nosotros','MainController@nosotros');
 
 #FIN APRENDER
 
+#LOGROS
 
+	Route::post('logros','AchievementController@store');
 
-Auth::routes();
+	Route::get('/logros','AchievementController@show')->name("logros");
+
+#FIN LOGROS
+
 
 #Route::get('/home', 'HomeController@index')->name('home');
 

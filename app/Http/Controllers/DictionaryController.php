@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class DictionaryController extends Controller
 {
-    
+
     public function __construct()
     {
         $this->middleware('auth')->except('search');
@@ -32,7 +32,7 @@ class DictionaryController extends Controller
 
     public function store(Request $request)
     {
-        
+
         $request->validate([
             'palabra' => 'required:max20' ,
             'traduccion' => 'required:max30' ,
@@ -61,33 +61,33 @@ class DictionaryController extends Controller
     }
 
 
-  
+
     public function show(Dictionary $dictionary)
     {
         return view('aprender.aprendePalabras', ['dictionary' => Dictionary::find($id)]);
     }
 
- 
+
     public function edit(Dictionary $dictionary)
     {
         return view('administrar.editar');
-        
+
     }
 
-  
+
     public function update(Request $request, Dictionary $dictionary)
     {
         //
     }
 
- 
+
 
     public function destroy($id)
     {
         $dictionary = Dictionary::find($id);
         $dictionary->delete();
         return redirect()->action('DictionaryController@listar');
- 
+
     }
 
 
@@ -109,7 +109,7 @@ class DictionaryController extends Controller
 
     public function buscar()
     {
-    
+
     return view('administrar.buscar');
 
     }
