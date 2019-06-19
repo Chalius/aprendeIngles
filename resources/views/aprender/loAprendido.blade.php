@@ -22,7 +22,7 @@
           <th>Pronunciación</th>
           <th>Mnemotecnia</th>
         </thead>
-        @foreach($aprendidas as $word)
+        @foreach($diccionario as $word)
           <tbody>
             <td>{{$word->img}}</td>
             <td>{{$word->palabra}}</td>

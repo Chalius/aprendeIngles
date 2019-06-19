@@ -42,18 +42,17 @@ class AprendidasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) #ARREGLANDO
-    {
+    public function store(Request $request){
       //Funcion llamada por el boton "aprendido!"
 
       $user=User::find(auth()->id());
-      $words=$request->get('palabras');
+      $ids=$request->get('ids');
     //  dd($words);
 
-      foreach ($words as $word) {
-        $learned=new Aprendidas();
-        $learned->palabra = $word;
-
+      foreach ($ids as $id) {
+        $learned=new Aprendidas();# funciona con Dictionary y con Aprendidas
+        $learned->id = $id;# Segun el campo de $learned ubicará en la vista loAprendido
+        #AÑADIR CONDICIONAL PARA QUE NO GUARDE PALABRAS QUE YA ESTAN APRENDIDAS.
         $user->aprendidas()->save($learned);
       }
       return redirect()->route('aprendePalabras');
@@ -65,8 +64,8 @@ class AprendidasController extends Controller
      * @param  \App\Aprendidas  $aprendidas
      * @return \Illuminate\Http\Response
      */
-    public function show(Aprendidas $aprendidas)
-    {$words = Dictionary::all()->take(5); # sin paginación
+    public function show(Aprendidas $aprendidas){
+      #$words = Dictionary::all()->take(5); # sin paginación
         //
     }
 
