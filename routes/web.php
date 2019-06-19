@@ -87,6 +87,9 @@ Route::get('/administrar/agregar/success', 'DictionaryController@success')->name
 
 #Ruta de busqueda search
 Route::get('/administrar/search', 'DictionaryController@search')->name('search');
+#Ruta de busqueda usuario normal
+Route::get('/usuario/search', 'DictionaryController@searchUsuario')->name('usuario.search');
+
 
 #Ruta de destruir palabra de diccionario
 Route::delete('/dicionaries/{id}/delete', 'DictionaryController@destroy')->name('dictionary.destroy');

@@ -126,5 +126,15 @@ class DictionaryController extends Controller
         return view ('administrar.searchresult')->with('words', $words);
     }
 
+    #Funcion de busqueda del usuario
+
+    public function searchUsuario(Request $request){
+
+        $query = $request->input('query');
+
+        $words = Dictionary::where('palabra', 'like' , "%$query%")->get();
+        return view ('aprender.searchresult')->with('words', $words);
+    }
+
 
 }
