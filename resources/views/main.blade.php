@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="py-5">
 
 
    <div class="container justify-content-center" style="background-color: rgb(255, 255, 255);">
@@ -9,6 +9,7 @@
 
 
    </div>
+</div>
 
 
 @endsection
