@@ -3,62 +3,84 @@
 
 @section('content')
 
-<div class="container">
-	<div class="row justify-content-center"> 
+<div class="py-5 text-center" style="background-image: url('https://www.lemaydigital.com/wp-content/uploads/2018/02/great-feature-image-800x400.jpg');background-size:cover;">
+    <div class="container">
+      <div class="row">
+        <div class="bg-white p-5 mx-auto col-md-8 col-10">
+          <h3 class="display-4">Busqueda de Palabras</h3>
+          <p class="mb-4">Para buscar palabras ingrese el registro en formato de ingles, por ejemplo si desea verificar la existencia de la palabra "house" tendra que ingresarla en ingles.</p>
+          <div class="text-center">
 
+              <form class="form-inline justify-content-center" action=" {{ route('search')}}" method="GET">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="query" name="query" placeholder="Busqueda">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button></div>
+                </div>
+              </form>
 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3" >
+    <div class="container">
+      <div class="row">
+        <div class="ml-auto col-lg-12 text-center text-lg-left">
+          <h1 class="">Resultados de la busqueda</h1>
+          <p class="mb-0">{{ $words->count() }} resultado(s) para '{{ request()->input('query') }}'</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped table-hover" style="text-align: center">
+              <thead>
+                <tr class="table-secondary">
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Ingles</th>
+                  <th scope="col">Traduccion</th>
+                  <th scope="col">Pronunciacion</th>
+                  <th scope="col">Nemotecnia</th>
+                  <th scope="col">Accion</th>
+                </tr>
+              </thead>
+              @foreach($words as $word)
+              <tbody>
+                
+                  <tr>
+                      <td class="w-25">
+                          <img src="{{ asset('images/'. $word->img) }}" class="img-fluid img-thumbnail" alt="Aqui va una imagen" style="max-width: 400px;">   
+                      </td>
 
-					<div class="tab-pane" id="tab3">
-						<nav class="navbar navbar-light bg-light justify-content-center">
+                      <td class="align-middle">{{$word->palabra}}</td>
+                      <td class="align-middle">{{$word->traduccion}}</td>
+                      <td class="align-middle">{{$word->pronunciacion}}</td>
+                      <td class="align-middle">{{$word->nemotecnia}}</td>
+                      <td class="align-middle">
+                          <form action="{{ action('DictionaryController@destroy', $word->id) }}" method="POST">
+                              @csrf
+                              @method('DELETE')
+                              <button class="btn btn-danger float-right" type="submit">Eliminar</button>
+                          </form>
+                      </td>
+                  </tr>
 
-						  <form class="form-inline" action="{{ route('search')}}" method="GET" >
+              </tbody>
+              @endforeach
+            </table>
 
-						    <input class="form-control mr-sm-2" type="text" placeholder="Palabra a buscar" id="query" name="query" value="{{ request()->input('query') }}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-						    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-						  </form>
-						</nav>
-					</div>
-
-
-					<div class="search-container container">
-						<h1>Resultados de busqueda</h1>
-						<p>{{ $words->count() }} resultado(s) para '{{ request()->input('query') }}'</p>
-
-			
-						<table class="table table-hover" >
-					      <thead class="thead-light">
-					        <th>Imagen</th>
-					        <th>Ingles</th>
-					        <th>Traducción</th>
-					        <th>Pronunciación</th>
-					        <th>Mnemotecnia</th>
-					        <th>Accion</th>
-
-					      </thead>
-					      @foreach($words as $word)
-					        <tbody>
-					          <td><img src="{{ asset('images/'. $word->img) }}" class="img-fluid" alt="Aqui va una imagen"></td>
-					          <td>{{$word->palabra}}</td>
-					          <td>{{$word->traduccion}}</td>
-					          <td>{{$word->pronunciacion}}</td>
-					          <td>{{$word->nemotecnia}}</td>
-					          <td>
-					          	<form action="{{ action('DictionaryController@destroy', $word->id) }}" method="POST">
-		
-									@csrf
-							        @method('DELETE')
-							        <button class="btn btn-danger float-right" type="submit">Eliminar</button>
-
-					          	</form>
-					          </td>
-
-					        </tbody>
-					      @endforeach
-					    </table>
-					</div>
-
-	</div>
-</div>
 			
 @endsection
