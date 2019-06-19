@@ -2,7 +2,6 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-6 p-3">
-
               <img src="{{URL::asset('webimages/logo.png')}}" height="100px" width="auto" style="" class="mx-auto d-block">
       </div>
       <div class="col-lg-4 col-6 p-3">
