@@ -83,22 +83,15 @@
 
 
 
+
+
+
               </div>
               <div class="col-lg-6">
                 <h4>DESEMPEÑO</h4>
                 <p>Aquí veremos el desempeño obtenido.</p>
               </div>
             </div>
-
-
-
-
-
-
-
-
-
-
 
           </div>
       </div>
