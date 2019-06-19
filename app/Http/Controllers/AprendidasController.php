@@ -49,6 +49,7 @@ class AprendidasController extends Controller
       $ids=$request->get('ids');
     //  dd($words);
 
+
       foreach ($ids as $id) {
         $learned=new Aprendidas();# funciona con Dictionary y con Aprendidas
         $learned->id = $id;# Segun el campo de $learned ubicará en la vista loAprendido
