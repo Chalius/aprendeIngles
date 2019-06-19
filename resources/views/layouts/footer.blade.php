@@ -13,8 +13,15 @@
       </div>
       <div class="col-lg-4 col-6 p-3">
         <p><a href="" target="_blank">Bustamante y Rivero, 410&nbsp;<br>Arequipa, PERU</a></p>
-        <p> <a href="">+51 - 985-555150</a></p>
-        <p class="mb-0"><a href="">luismancor@hotmail.com</a> </p>
+
+        <p> <a href="">+51 - 985-555150</a><br>
+        <a href="">juan.mancilla.c@tecsup.edu.pe</a> </p>
+
+        <p> <a href="">+51 - 930-352718</a><br>
+          <a href="">gonzalo.quispe.f@tecsup.edu.pe</a> </p>
+
+
+
       </div>
       <div class="col-md-4 p-3">
         <h5> <b>Sobre Aprende Ingles</b></h5>
@@ -23,7 +30,7 @@
     </div>
     <div class="row">
       <div class="col-md-12 text-center">
-        <p class="mb-0 mt-2">© 2014-2018 Aprende Ingles. All rights reserved</p>
+        <p class="mb-0 mt-2">© 2019-2020 Aprende Ingles. All rights reserved</p>
       </div>
     </div>
   </div>
