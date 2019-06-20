@@ -2,14 +2,15 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+#use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model as Moloquent;
 
-class Achievement extends Model
+class Achievement extends Moloquent
 {
-    $protected=[
+    protected $fillable = [
       'name',
       'description',
-      'imagen',
+      'img',
     ];
 
 }

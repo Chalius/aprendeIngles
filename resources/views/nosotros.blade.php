@@ -33,7 +33,7 @@
     </div>
 
     <div class="row justify-content-center">
-      <p>Esta página de enseñanza de ingles se basa en el método de enseñanza de Ramon Campayo.</p>
+      <p>Esta página de enseñanza de ingles se basa en el método de enseñanza de Ramon Campayo, él es un escritor español, hipnoterapeuta y mnemonista autodidacta especializado en memorización y lectura rápida. Posee numerosos récords mundiales de memorización y es probablemente el memorizador más rápido de la historia.</p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/TXKOOM87QUs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{URL::asset('webimages/minilogo.png')}}" height="40px" width="40px" style="" class="mx-auto d-block">  
+            <img src="{{URL::asset('webimages/minilogo.png')}}" height="40px" width="40px" style="" class="mx-auto d-block">
         </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -20,6 +20,12 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{ url("/administrar/agregar") }}"> Nueva Palabra </a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ url("/administrar/logros") }}"> Nuevo logro </a>
+                </li>
+
+
                 @endauth
             </ul>
 

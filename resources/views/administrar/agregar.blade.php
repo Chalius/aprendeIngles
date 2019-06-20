@@ -1,6 +1,8 @@
 @extends('layouts.admi')
 
 @section('content')
+<div class="py-5">
+
 <div class="container">
 	<div class="row justify-content-center">
 		<h2>Nueva palabra</h2>
@@ -9,7 +11,7 @@
 	@if ($message = Session::get('success'))
 		<div class="alert alert-success alert-block">
 			<button type="button" class="close" data-dismiss="alert">X</button>
-				<strong>{{ $message }}</strong>		
+				<strong>{{ $message }}</strong>
 		</div>
 		<img src="images/{{Session::get('image') }}">
 	@endif
@@ -29,41 +31,41 @@
 		@csrf
 			<div class="mb-3">
 				<label for="palabra">{{ __('Palabra') }}</label>
-				<input id="palabra" type="text" class="form-control{{ $errors->has('palabra') ? ' is-invalid' : '' }}" name="palabra" value="{{ old('palabra') }}" autofocus required/>	
+				<input id="palabra" type="text" class="form-control{{ $errors->has('palabra') ? ' is-invalid' : '' }}" name="palabra" value="{{ old('palabra') }}" autofocus required/>
 				@if ($errors->has('palabra'))
 					<span class="invalid-feedback" role="alert">
 						<strong>{{ $errors->first('palabra') }}</strong>
-					</span>	
+					</span>
 				@endif
 			</div>
 
 			<div class="mb-3">
 				<label for="pronunciacion">{{ __('Pronunciacion') }}</label>
-				<input id="pronunciacion" type="text" class="form-control{{ $errors->has('pronunciacion') ? ' is-invalid' : '' }}" name="pronunciacion" value="{{ old('pronunciacion') }}" autofocus required/>	
+				<input id="pronunciacion" type="text" class="form-control{{ $errors->has('pronunciacion') ? ' is-invalid' : '' }}" name="pronunciacion" value="{{ old('pronunciacion') }}" autofocus required/>
 				@if ($errors->has('pronunciacion'))
 					<span class="invalid-feedback" role="alert">
 						<strong>{{ $errors->first('pronunciacion') }}</strong>
-					</span>	
+					</span>
 				@endif
 			</div>
 
 			<div class="mb-3">
 				<label for="nemotecnia">{{ __('Nemotecnia') }}</label>
-				<input id="nemotecnia" type="text" class="form-control{{ $errors->has('nemotecnia') ? ' is-invalid' : '' }}" name="nemotecnia" value="{{ old('nemotecnia') }}" autofocus required/>	
+				<input id="nemotecnia" type="text" class="form-control{{ $errors->has('nemotecnia') ? ' is-invalid' : '' }}" name="nemotecnia" value="{{ old('nemotecnia') }}" autofocus required/>
 				@if ($errors->has('nemotecnia'))
 					<span class="invalid-feedback" role="alert">
 						<strong>{{ $errors->first('nemotecnia') }}</strong>
-					</span>	
+					</span>
 				@endif
 			</div>
 
 			<div class="mb-3">
 				<label for="traduccion">{{ __('Traduccion') }}</label>
-				<input id="traduccion" type="text" class="form-control{{ $errors->has('traduccion') ? ' is-invalid' : '' }}" name="traduccion" value="{{ old('traduccion') }}" autofocus required/>	
+				<input id="traduccion" type="text" class="form-control{{ $errors->has('traduccion') ? ' is-invalid' : '' }}" name="traduccion" value="{{ old('traduccion') }}" autofocus required/>
 				@if ($errors->has('traduccion'))
 					<span class="invalid-feedback" role="alert">
 						<strong>{{ $errors->first('traduccion') }}</strong>
-					</span>	
+					</span>
 				@endif
 			</div>
 
@@ -79,5 +81,5 @@
 		</form>
 	</div>
 </div>
+</div>
 @endsection
-

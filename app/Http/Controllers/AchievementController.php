@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Achievement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AchievementController extends Controller
 {
@@ -40,27 +41,26 @@ class AchievementController extends Controller
       $request->validate([
           'name' => 'required:max20' ,
           'description' => 'required:max40' ,
-          'imagen' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+          'img' => 'required|image|mimes:jpeg,png,jpg|max:2048',
       ]);
 
-      #$img = $request->file('img');
-      #$imgName = time().$img->getClientOriginalName();
+      $img = $request->file('img');
+      $imgName = time().$img->getClientOriginalName();
+
       $name = $request->get('name');
       $description = $request->get('description');
-      $imagen = $request->get('imagen');
+      $imagen = $request->get('img');
 
 
-      $dictionary = new Dictionary();
-      $dictionary->palabra = $palabra;
-      $dictionary->pronunciacion = $pronunciacion;
-      $dictionary->nemotecnia = $nemotecnia;
-      $dictionary->traduccion = $traduccion;
-      $dictionary->img = $imgName;
+      $logro = new Achievement();
+      $logro->name = $name;
+      $logro->description = $description;
+      $logro->img = $imgName;
 
       $request->img->move(public_path('images'), $imgName);
-      $dictionary->save();
+      $logro->save();
 
-      return redirect()->route('success');
+      return redirect()->route('logros');
 
 
 
@@ -76,7 +76,7 @@ class AchievementController extends Controller
      */
     public function show(Achievement $achievement)
     {
-        //
+        return view('administrar.logros');
     }
 
     /**

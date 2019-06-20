@@ -41,6 +41,7 @@ class DictionaryController extends Controller
 
         $img = $request->file('img');
         $imgName = time().$img->getClientOriginalName();
+
         $palabra = $request->get('palabra');
         $pronunciacion = $request->get('pronunciacion');
         $nemotecnia = $request->get('nemotecnia');
@@ -51,6 +52,7 @@ class DictionaryController extends Controller
         $dictionary->pronunciacion = $pronunciacion;
         $dictionary->nemotecnia = $nemotecnia;
         $dictionary->traduccion = $traduccion;
+
         $dictionary->img = $imgName;
 
         $request->img->move(public_path('images'), $imgName);
