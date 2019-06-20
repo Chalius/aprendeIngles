@@ -70,7 +70,7 @@ class AprenderController extends Controller
 
   public function loAprendido(){
     $user=User::find(Auth::id());
-    #$aprendidas=new Aprendidas(); da igual si este código esta o no.
+    #$aprendidas=new Aprendidas(); #da igual si este código esta o no.
     $aprendidas=$user->aprendidas;
     $arrayIds=[]; #array donde se guardará ids de words aprendidas by the user.
     foreach ($aprendidas as $aprendida) {
