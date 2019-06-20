@@ -46,7 +46,7 @@
         <div class="p-3 col-md-7 mr-auto bg-white text-dark">
           <div class="blockquote mb-0">
             <p>"Mistakes are proof that you are trying"</p>
-            <div class="blockquote-footer"> <b>J. Mancilla</b>&nbsp;Programer at Aprende ingles.inc</div>
+            <div class="blockquote-footer"> <b>G.Quispe</b>&nbsp;Programer at Aprende ingles.inc</div>
           </div>
         </div>
       </div>
