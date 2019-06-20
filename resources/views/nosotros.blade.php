@@ -16,7 +16,7 @@
       <div class="col-lg-6">
         <h4>Nuestros objetivos</h4>
         <p>El objetivo de esta página es que cualquier usuario pueda acceder a una
-        educación de calidad.</p>
+        educación de calidad, con respecto a la enseñanza del idioma ingles.</p>
       </div>
 
       <div class="col-lg-6">
