@@ -4,7 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use app\User;
+use App\User;
+use App\Achievement;
+#use Illuminate\Support\Facades\Achievement;
+
+
+
+
+
 
 class MainController extends Controller
 {
@@ -19,7 +26,9 @@ class MainController extends Controller
   }
 
   public function perfil(){
-    return view('perfil');
+    #$logros=new Achievement;
+    $logros=Achievement::All();
+    return view('perfil',compact('logros'));
   }
 
 

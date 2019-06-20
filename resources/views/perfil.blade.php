@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="py-5">
   <div class="container">
       <div class="row justify-content-center">
           <div class="col-md-10">
@@ -14,6 +14,39 @@
             <div class="row marketing">
               <div class="col-lg-6">
                 <h4>LOGROS</h4>
+
+
+
+                @foreach($logros as $logro)
+
+                <div class="row mb-2">
+                  <div class="col-md-10">
+                    <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                      <div class="card-body d-flex flex-column align-items-start">
+                        <h3 class="mb-0">
+                          {{$logro->name}}
+                        </h3>
+                        <p class="card-text mb-auto">{{$logro->description}}</p>
+                        <p class="card-text mb-auto">INCOMPLETO</p>
+                      </div>
+                      <img class="card-img-right flex-auto d-none d-lg-block" src="{{URL::asset('images/'.$logro->img) }}"  height="128" width="128" alt="logro1">
+                    </div>
+                  </div>
+                </div>
+
+                @endforeach
+
+
+
+
+
+
+
+
+
+
+
+
 
                 {{-- Items de logros --}}
                 <div class="row mb-2">
@@ -83,6 +116,9 @@
 
 
 
+
+
+
               </div>
               <div class="col-lg-6">
                 <h4>DESEMPEÑO</h4>
@@ -90,21 +126,11 @@
               </div>
             </div>
 
-
-
-
-
-
-
-
-
-
-
           </div>
       </div>
   </div>
 
-
+</div>
 
 
 @endsection

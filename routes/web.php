@@ -32,23 +32,38 @@ Route::get('/main',function(){
 
 Route::get('/perfil','MainController@perfil');
 
-Route::get('/aprender','AprenderController@aprenderPalabras');
-
 Route::get('/nosotros','MainController@nosotros');
 
-route::get('/aprender/aprendePalabras','AprenderController@aprenderPalabras')->name("aprendePalabras");
+#APRENDER
 
-route::get('/aprender/ejercicios','AprenderController@ejercicios');
+	Route::get('/aprender','AprenderController@aprenderPalabras');
 
-route::get('/aprender/examenes','AprenderController@examenes');
+	Route::get('/aprender/aprendePalabras','AprenderController@aprenderPalabras')->name("aprendePalabras");
+	#Route::post('/aprender/aprendePalabras','AprenderController@aprenderPalabras')->name("aprendePalabras1"); #borrar
 
-route::get('/aprender/loAprendido','AprenderController@loAprendido');
+	route::get('/aprender/ejercicios','AprenderController@ejercicios');
+
+	route::get('/aprender/examenes','AprenderController@examenes');
+
+	route::get('/aprender/loAprendido','AprenderController@loAprendido');
+
+	Route::post('aprendido','AprendidasController@store');
+
+#FIN APRENDER
 
 
-Route::get('aprendido','AprendidasController@store');
+
+#LOGROS
+
+	Route::post('logros','AchievementController@store');
+
+	Route::get('/logros','AchievementController@show')->name("logros");
+
+#FIN LOGROS
 
 
-Auth::routes();
+
+
 
 #Route::get('/home', 'HomeController@index')->name('home');
 
@@ -61,30 +76,50 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-#Rutas del administrador
-Route::get('/admin', 'DictionaryController@index')
-	->middleware('is_admin')
-	->name('admin');
+#RUTAS DE ADMINISTRADOR
+	Route::get('/admin', 'DictionaryController@index')
+		->middleware('is_admin')
+		->name('admin');
 
 
-Route::get('/administrar/editar','DictionaryController@edit');
+	Route::get('/administrar/editar','DictionaryController@edit');
 
-Route::get('/administrar/listar','DictionaryController@listar');
+	Route::get('/administrar/listar','DictionaryController@listar');
 
-Route::get('/administrar/agregar','DictionaryController@agregar')->name('agregar');
+	Route::get('/administrar/agregar','DictionaryController@agregar')->name('agregar');
 
-Route::get('/administrar/buscar','DictionaryController@buscar')->name('buscar');
+	Route::get('/administrar/buscar','DictionaryController@buscar')->name('buscar');
 
-Route::post('/administrar/agregar','DictionaryController@store');
+	Route::post('/administrar/agregar','DictionaryController@store');
 
-#Ruta de success
-Route::get('/administrar/agregar/success', 'DictionaryController@success')->name('success');
+	#Ruta de success
+	Route::get('/administrar/agregar/success', 'DictionaryController@success')->name('success');
+
+	#Ruta de busqueda search
+	Route::get('/administrar/search', 'DictionaryController@search')->name('search');
+
+	Route::get('/administrar/logros','AchievementController@show');
+
+
+#FIN RUTAS ADMINISTRADOR
+
+
+
+
 
 #Ruta de busqueda search
 Route::get('/administrar/search', 'DictionaryController@search')->name('search');
+#Ruta de busqueda usuario normal
+Route::get('/usuario/search', 'DictionaryController@searchUsuario')->name('usuario.search');
+
+
 
 #Ruta de destruir palabra de diccionario
 Route::delete('/dicionaries/{id}/delete', 'DictionaryController@destroy')->name('dictionary.destroy');
+
+#Ruta para editar palabra
+Route::patch('/administrar/{id}', 'DictionaryController@update')->name('dictionary.update');
+Route::get('/administrar/{id}/edit', 'DictionaryController@edit')->name('dictionary.edit');
 
 
 #Rutas para editar usuario admin

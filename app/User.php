@@ -26,7 +26,9 @@ class User extends Authenticatable
         'password',
 
         'aprendidas',
+        'userachievements',
         'type',
+
     ];
 
     /**
@@ -68,7 +70,12 @@ class User extends Authenticatable
 
     public function aprendidas()
     {
-        return $this->hasMany('App\Aprendidas');
+        return $this->embedsMany('App\Aprendidas');
     }
+
+    public function userachievement(){
+      return $this->embedsMany('App\Userachievement');
+    }
+
 
 }

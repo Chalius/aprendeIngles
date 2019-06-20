@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Aprendidas;
+use App\User;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Dictionary;
@@ -41,38 +42,21 @@ class AprendidasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Dictionary $words) #ARREGLANDO
-    {
+    public function store(Request $request){
       //Funcion llamada por el boton "aprendido!"
-      $learned=new Aprendidas();
-      #$ids=array();
-      #foreach ($words as $word) {
-        #array_push($ids,$word->get('_id'));
-        $learned->palabra = $words;
-        $learned->save();
-      #}
+
+      $user=User::find(auth()->id());
+      $ids=$request->get('ids');
+    //  dd($words);
 
 
-      #$learned->idPalabra1=$request->get('idPalabra');
-      #$learned->fechaRepaso1=\Carbon::now();
-
-      #$learned->save();
-      /*
-      $learned->idPalabra2=$request->get('idPalabra');
-      $learned->fechaRepaso2=$request->now();
-
-      $learned->idPalabra3=$request->get('idPalabra');
-      $learned->fechaRepaso3=$resquest->now();
-
-      $learned->idPalabra4=$request->get('idPalabra');
-      $learned->fechaRepaso4=$request->now();
-
-      $learned->idPalabra5=$request->get('idPalabra');
-      $learned->fechaRepaso5=$request->now();
-      */
-
+      foreach ($ids as $id) {
+        $learned=new Aprendidas();# funciona con Dictionary y con Aprendidas
+        $learned->id = $id;# Segun el campo de $learned ubicará en la vista loAprendido
+        #AÑADIR CONDICIONAL PARA QUE NO GUARDE PALABRAS QUE YA ESTAN APRENDIDAS.
+        $user->aprendidas()->save($learned);
+      }
       return redirect()->route('aprendePalabras');
-
     }
 
     /**
@@ -81,8 +65,8 @@ class AprendidasController extends Controller
      * @param  \App\Aprendidas  $aprendidas
      * @return \Illuminate\Http\Response
      */
-    public function show(Aprendidas $aprendidas)
-    {$words = Dictionary::all()->take(5); # sin paginación
+    public function show(Aprendidas $aprendidas){
+      #$words = Dictionary::all()->take(5); # sin paginación
         //
     }
 
