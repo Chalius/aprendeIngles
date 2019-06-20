@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <h1 class="card-header">Edicion de cuenta</h1>
+                <h1 class="card-header">Edición de cuenta</h1>
                 @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>

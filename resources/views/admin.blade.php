@@ -14,7 +14,7 @@
           <div class="card"> <img class="card-img-top" src="https://www.lavozhispanact.com/wp-content/uploads/2017/08/tia-400x200.jpg" alt="Card image cap">
             <div class="card-body">
               <h4 class="card-title">Listar Palabras</h4>
-              <p class="card-text">Este menu sirve para visualizar la lista completa de palabras en la Base de datos</p> <a href="{{url("/administrar/listar")}}" class="btn btn-primary">Ir</a>
+              <p class="card-text">Este menú sirve para visualizar la lista completa de palabras en la Base de datos</p> <a href="{{url("/administrar/listar")}}" class="btn btn-primary">Ir</a>
             </div>
           </div>
         </div>
@@ -23,7 +23,7 @@
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">Buscar</h4>
-              <p class="card-text">Este menu sirve para buscar palabras de forma individual y su edicion.</p> <a href="{{ url("/administrar/buscar") }}" class="btn btn-primary">ir</a>
+              <p class="card-text">Este menú sirve para buscar palabras de forma individual y su elección.</p> <a href="{{ url("/administrar/buscar") }}" class="btn btn-primary">ir</a>
             </div>
           </div>
         </div>
