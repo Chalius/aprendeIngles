@@ -15,7 +15,7 @@
     <div class="row marketing">
       <div class="col-lg-6">
         <h4>Nuestros objetivos</h4>
-        <p>El objetivo de esta página es que cualquier usuario pueda acceder a
+        <p>El objetivo de esta página es que cualquier usuario pueda acceder a una
         educación de calidad.</p>
       </div>
 
@@ -27,7 +27,6 @@
     </div>
 
     <hr style="">
-<<<<<<< HEAD
       <div class="row marketing">
         <div class="col-lg-6">
           <h4>Nuestros objetivos</h4>
@@ -42,8 +41,6 @@
         </div>
       </div>
   </div>
-=======
->>>>>>> ad1e7db82ae25f3610bce2a17d42c5b9ad18c57e
 
     <div class="row justify-content-center">
       <h2>Nuestro método</h2>
