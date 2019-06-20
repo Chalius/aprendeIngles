@@ -7,7 +7,7 @@
      <div class="row">
        <div class="bg-white p-5 mx-auto col-md-8 col-10">
          <h3 class="display-4">Busqueda de Palabras</h3>
-         <p class="mb-4">Para buscar palabras ingrese el registro en formato de ingles, por ejemplo si desea verificar la existencia de la palabra "house" tendra que ingresarla en ingles.</p>
+         <p class="mb-4">Para buscar palabras ingrese el registro en formato de ingles, por ejemplo: Si desea verificar la existencia de la palabra "house" tendra que ingresarla en ingles.</p>
          <div class="text-center">
 
            <form class="form-inline justify-content-center" action=" {{ route('usuario.search')}}" method="GET">

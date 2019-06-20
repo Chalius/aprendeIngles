@@ -6,7 +6,7 @@
      <div class="row">
        <div class="bg-white p-5 mx-auto col-md-8 col-10">
          <h3 class="display-3">Lo aprendido</h3>
-         <p class="mb-4">Estas son las palabras aprendidas, puedes revisar nuevamente las palabras y sus traducciones, en caso de que quieras aprender nuevas palabras, accede al menu de "Aprende palabras." </p>
+         <p class="mb-4">Estas son las palabras aprendidas, puedes revisar nuevamente las palabras y sus traducciones, en caso de que quieras repasar lo aprendido, accede al menu de "Aprende palabras." </p>
        </div>
      </div>
    </div>

@@ -101,7 +101,7 @@
                         <h3 class="mb-0">
                           Persistente
                         </h3>
-                        <p class="card-text mb-auto">Completa tus primeros 20 ejercicios.</p>
+                        <p class="card-text mb-auto">Completa loss primeros 20 ejercicios.</p>
                         <p class="card-text mb-auto">INCOMPLETO</p>
                       </div>
                       <img class="card-img-right flex-auto d-none d-lg-block" src="{{URL::asset('webimages/logros/logro4.png')}}"  height="128" width="128" alt="logro1">

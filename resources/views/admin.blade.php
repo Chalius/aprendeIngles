@@ -32,7 +32,7 @@
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">Agregar Palabras</h4>
-              <p class="card-text">Este menu sirve para agregar nuevas palabras de vocabulario a la base de datos</p> <a href="{{ url("/administrar/agregar") }}" class="btn btn-primary">ir</a>
+              <p class="card-text">Este menú sirve para agregar nuevas palabras de vocabulario a la base de datos</p> <a href="{{ url("/administrar/agregar") }}" class="btn btn-primary">ir</a>
             </div>
           </div>
         </div>

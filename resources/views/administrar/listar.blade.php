@@ -9,7 +9,7 @@
       <div class="row">
         <div class="bg-white p-5 mx-auto col-md-8 col-10">
           <h3 class="display-3">Lista de resultados</h3>
-          <p class="mb-4">A continuacion se mostraran todos los resultados de las palabras almacenadas en la base de datos. En caso se desee borrar un elemento acceder a los botones implementados en la lista. </p>
+          <p class="mb-4">A continuación se mostraran todos los resultados de las palabras almacenadas en la base de datos. En caso se desee borrar un elemento, acceder a los botones implementados en la lista. </p>
         </div>
       </div>
     </div>

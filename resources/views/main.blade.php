@@ -6,7 +6,7 @@
     <div class="row">
       <div class="text-center mx-auto col-md-12">
         <h1>Opciones para aprender palabras.</h1>
-        <p class="lead">Aprender el idioma requiere de mucho esfuerzo y dedicacion, puedes empezar con la seccion de aprender palabras y agregar algunos registros a tu directorio personal.</p>
+        <p class="lead">Aprender el idioma requiere de mucho esfuerzo y dedicación, puedes empezar con la sección de "Aprender palabras" y agregar algunos registros a tu directorio personal.</p>
       </div>
     </div>
     <div class="row">
@@ -14,7 +14,7 @@
         <div class="card"> <img class="card-img-top" src="https://www.lavozhispanact.com/wp-content/uploads/2017/08/tia-400x200.jpg" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Lista de palabras</h4>
-            <p class="card-text">Mediante este menu podras acceder a todas las palabras disponibles en la aplicacion, para que puedas memorizarlas y comprobar tus logros.</p> <a href="{{url('/aprender/aprendePalabras')}}" class="btn btn-primary">Ir</a>
+            <p class="card-text">Mediante este menú podras acceder a todas las palabras disponibles en la aplicacion, para que puedas memorizarlas y comprobar tus logros.</p> <a href="{{url('/aprender/aprendePalabras')}}" class="btn btn-primary">Ir</a>
           </div>
         </div>
       </div>
@@ -23,7 +23,7 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Buscar</h4>
-            <p class="card-text">No tienes las ganas de visualizar todas las palabras de un golpe, esta opcion te permite buscar una palabra de forma individual.</p> <a href="{{url('/aprender/examenes')}}" class="btn btn-primary">ir</a>
+            <p class="card-text">¿Se te dificulta memorizar palabras en poco tiempo?. Esta opción te permite buscar algunas palabras de forma individual.</p> <a href="{{url('/aprender/examenes')}}" class="btn btn-primary">ir</a>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Lo aprendido</h4>
-            <p class="card-text">Una vez que hayas agregado nuevas palabras a tu repositorio, estas estaran diponibles siempre en tu repositorio para que puedas repasar las veces que quieras</p> <a href="{{url('/aprender/loAprendido')}}" class="btn btn-primary">ir</a>
+            <p class="card-text">Una vez que hayas agregado nuevas palabras a tu repositorio, estas estaran diponibles siempre en tu repositorio para que puedas repasar las veces que desees.</p> <a href="{{url('/aprender/loAprendido')}}" class="btn btn-primary">ir</a>
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <h1 class="mb-4 display-3">El limite es el cielo</h1>
-        <p class="lead mb-5">La unica limitante a aprender un nuevo idioma, son las ganas que le puedas poner al estudio, sierdo perserverante nada es imposible.</p>
+        <p class="lead mb-5">La única limitante a aprender un nuevo idioma, son las ganas que le puedas poner al estudio. Debemos ser perserverantes, pues es un esfuerzo continuo que al final daran resultados antes nuestros objetivos logrados.</p>
         <a href="{{url('/aprender/aprendePalabras')}}" class="btn btn-lg btn-primary mx-1">Empieza ahora</a>
       </div>
     </div>
