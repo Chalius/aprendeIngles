@@ -1,7 +1,7 @@
 @extends('layouts.admi')
 
 @section('content')
-<div class="py-5" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://blog.tunubi.com/wp-content/uploads/2018/04/SEO-1-800x500.png); background-position: center center, center center;  background-size: 100%, 100%;  background-repeat: repeat, repeat;" >
+<div class="py-5" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url({{URL::asset('webimages/nuevoregistro.png')}}); background-position: center center, center center;  background-size: 100%, 100%;  background-repeat: repeat, repeat;" >
    <div class="container">
      <div class="row">
        <div class="col-md-6 col-10 bg-white p-5 mx-auto mx-md-0 text-dark">

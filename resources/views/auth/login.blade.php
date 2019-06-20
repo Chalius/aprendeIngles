@@ -4,7 +4,7 @@
 @section('content')
 
 
-<div class="py-5 text-center" style="   background-image: url(&quot;http://quattrotenori.es/wp-content/uploads/2015/06/Fondo-Ciudad-de-las-Artes-compressor.jpg&quot;); background-size: cover; background-position: top left;  background-repeat: repeat;" >
+<div class="py-5 text-center" style="   background-image: url({{URL::asset('webimages/login.png')}}); background-size: cover; background-position: top left;  background-repeat: repeat;" >
     <div class="container">
       <div class="row">
         <div class="mx-auto col-md-6 col-10 bg-white p-5">

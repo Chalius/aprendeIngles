@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="py-5 text-center" style="background-image: url('https://www.lemaydigital.com/wp-content/uploads/2018/02/great-feature-image-800x400.jpg');background-size:cover;" >
+<div class="py-5 text-center" style="background-image: url({{URL::asset('webimages/primer.png')}});background-size:cover;" >
     <div class="container">
       <div class="row">
         <div class="bg-white p-5 mx-auto col-md-8 col-10">
@@ -33,8 +33,6 @@
 
               @foreach($words as $word)
               <tbody>
-                
-             
                 <tr>
                     <td class="w-25">
                         <img src="{{ asset('images/'. $word->img) }}" class="img-fluid img-thumbnail" alt="Aqui va una imagen" style="max-width: 400px;">   
@@ -51,7 +49,6 @@
             </table>
 
             {{-- formulario para el boton "aprendido!""--}}
-
               <?php
               #$array = [];
               $array[]=array();

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="py-5 text-center" style="background-image: url(&quot;https://timedotcom.files.wordpress.com/2018/09/scrabble-new-words-2018.jpg?quality=85&quot;); background-size: cover;">
+<div class="py-5 text-center" style="background-image: url({{URL::asset('webimages/agregarfondo.png')}}); background-size: cover;">
    <div class="container">
      <div class="row">
        <div class="mx-auto col-md-6 col-10 bg-white p-5">
