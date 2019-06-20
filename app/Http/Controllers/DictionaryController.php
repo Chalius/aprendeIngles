@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class DictionaryController extends Controller
 {
-
+    
     public function __construct()
     {
         $this->middleware('auth')->except('search');
@@ -32,7 +32,7 @@ class DictionaryController extends Controller
 
     public function store(Request $request)
     {
-
+        
         $request->validate([
             'palabra' => 'required:max20' ,
             'traduccion' => 'required:max30' ,
@@ -41,7 +41,6 @@ class DictionaryController extends Controller
 
         $img = $request->file('img');
         $imgName = time().$img->getClientOriginalName();
-
         $palabra = $request->get('palabra');
         $pronunciacion = $request->get('pronunciacion');
         $nemotecnia = $request->get('nemotecnia');
@@ -52,7 +51,6 @@ class DictionaryController extends Controller
         $dictionary->pronunciacion = $pronunciacion;
         $dictionary->nemotecnia = $nemotecnia;
         $dictionary->traduccion = $traduccion;
-
         $dictionary->img = $imgName;
 
         $request->img->move(public_path('images'), $imgName);
@@ -63,35 +61,23 @@ class DictionaryController extends Controller
     }
 
 
-
+  
     public function show(Dictionary $dictionary)
     {
         return view('aprender.aprendePalabras', ['dictionary' => Dictionary::find($id)]);
     }
 
-
-
-    public function edit(Dictionary $dictionary)
-    {
-        return view('administrar.editar');
-
-    }
-
-
-    public function update(Request $request, Dictionary $dictionary)
-
-
+ 
     public function edit($id)
     {
         $word = Dictionary::find($id);
         #FALTA EDITAR
         return view('administrar.editar')->with('word',$word);
-
+        
     }
 
-
+  
     public function update(Request $request, $id)
-
     {
         $request->validate([
             'palabra' => 'required:max20' ,
@@ -119,14 +105,14 @@ class DictionaryController extends Controller
         return redirect('/administrar/listar')->with('success','Palabra actualizada');
     }
 
-
+ 
 
     public function destroy($id)
     {
         $dictionary = Dictionary::find($id);
         $dictionary->delete();
         return redirect()->action('DictionaryController@listar');
-
+ 
     }
 
 
@@ -148,7 +134,7 @@ class DictionaryController extends Controller
 
     public function buscar()
     {
-
+    
     return view('administrar.buscar');
 
     }

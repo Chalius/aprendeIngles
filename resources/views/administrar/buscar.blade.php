@@ -2,28 +2,7 @@
 @extends('layouts.admi')
 
 @section('content')
-	<div class="py-5">
-		<div class="container">
-			<div class="row justify-content-center mt-3">
 
-<<<<<<< HEAD
-				<div class="tab-pane" id="tab3">
-					<nav class="navbar navbar-light bg-light justify-content-center">
-
-					  <form class="form-inline" action=" {{ route('search')}}" method="GET" >
-
-					    <input class="form-control mr-sm-2" type="text" placeholder="Palabra a buscar" id="query" name="query">
-
-					    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-
-					  </form>
-					</nav>
-				</div>
-
-			</div>
-		</div>
-	</div>
-=======
 <div class="py-5 text-center" style="background-image: url({{URL::asset('webimages/primer.png')}});background-size:cover;">
 
   <div class="container">
@@ -46,5 +25,5 @@
     </div>
   </div>
 </div>
->>>>>>> origin/master
+
 @endsection

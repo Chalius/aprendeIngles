@@ -2,23 +2,6 @@
 
 @section('content')
 <div class="py-5">
-<<<<<<< HEAD
-
-
-   <div class="container justify-content-center" style="background-color: rgb(255, 255, 255);">
-   <img src="{{URL::asset('webimages/actitud.png')}}" height="100%" width="100%" style="" class="mx-auto d-block">
-  </div>
-
-  <div class="container justify-content-center">
-    <h3>
-      Dirigete a la zona de aprender desde el menu superior para empezar con tu aprendizaje.
-    </h3>
-
-  </div>
-
-
-
-=======
   <div class="container">
     <div class="row">
       <div class="text-center mx-auto col-md-12">
@@ -81,7 +64,6 @@
       </div>
     </div>
   </div>
->>>>>>> origin/master
 </div>
 
 @endsection

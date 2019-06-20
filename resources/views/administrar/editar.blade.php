@@ -1,5 +1,3 @@
-estas en editar palabra
-
 @extends('layouts.admi')
 
 @section('content')
