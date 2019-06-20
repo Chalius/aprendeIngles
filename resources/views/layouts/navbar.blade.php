@@ -1,9 +1,12 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
   <div class="container">
     <a class="navbar-brand" href="{{ url('/') }}">
         <img src="{{URL::asset('webimages/minilogo4.png')}}" height="40px" width="40px" style="" class="mx-auto d-block">
     </a>
+    <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon" ></span>
+          </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <!-- Left Side Of Navbar -->
