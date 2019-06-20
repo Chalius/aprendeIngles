@@ -1,66 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<<<<<<< HEAD
-
-
-
-
-
-
-
-  <div class="py-5">
-
-
-    <div class="container">
-      <h1>Lo aprendido</h1>
-
-      <div class="row justify-content-center">
-        @if(count($diccionario) )
-          <table class="table table-hover">
-            <thead class="thead-light">
-              <th>Imagen</th>
-              <th>Ingles</th>
-              <th>Traducción</th>
-              <th>Pronunciación</th>
-              <th>Mnemotecnia</th>
-            </thead>
-            @foreach($diccionario as $word)
-              <tbody>
-                <td>{{$word->img}}</td>
-                <td>{{$word->palabra}}</td>
-                <td>{{$word->traduccion}}</td>
-                <td></td>
-                <td>{{$word->nemotecnia}}</td>
-                {{--
-                  <td>{{$word->pronunciacion}}</td> genera problemas en la vista
-                --}}
-
-              </tbody>
-            @endforeach
-          </table>
-        @else
-          <h3>Todavía no tienes palabras estudiadas.</h3>
-        @endif
-      </div>
-    </div>
-
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 <div class="py-5 text-center" style="background-image: url('https://www.lemaydigital.com/wp-content/uploads/2018/02/great-feature-image-800x400.jpg');background-size:cover;">
    <div class="container">
      <div class="row">
@@ -95,7 +35,6 @@
                  <td class="w-25">
                      <img src="{{ asset('images/'. $word->img) }}" class="img-fluid img-thumbnail" alt="Aqui va una imagen" style="max-width: 400px;">   
                  </td>
-
                  <td class="align-middle">{{$word->palabra}}</td>
                  <td class="align-middle">{{$word->traduccion}}</td>
                  <td class="align-middle">{{$word->pronunciacion}}</td>
@@ -113,7 +52,6 @@
      </div>
    </div>
  </div>
->>>>>>> origin/master
 
 
 @endsection
