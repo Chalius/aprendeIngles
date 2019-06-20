@@ -39,7 +39,29 @@ class AprenderController extends Controller
   }
   */
   public function ejercicios(){
-    return view('aprender.ejercicios');
+
+
+
+    #consiguiendo ids de palabras aprendidas del usuario
+    $user=User::find(auth()->id());
+    $words=$user->aprendidas;
+    $wordIds=[];
+    foreach ($words as $word) {
+      array_push($wordIds,$word->id);
+    }
+
+    $aprendidas=Dictionary::whereIn('_id',$wordIds)->get();#objeto que guarda las palabras memorizadas por el User
+
+    $arrayApren=[];#array que guarda palabras memorizadas por el user
+    foreach($aprendidas as $aprendida){
+      array_push($arrayApren,$aprendida);
+    }
+
+    $random=$arrayApren[array_rand($arrayApren)];#random es un array con campos de 1 palabra
+
+
+    return view('aprender.ejercicios')->with('random',$random);
+    #return view('aprender.ejercicios');
   }
 
   public function examenes(){

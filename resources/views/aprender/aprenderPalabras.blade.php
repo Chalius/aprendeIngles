@@ -35,7 +35,7 @@
               <tbody>
                 <tr>
                     <td class="w-25">
-                        <img src="{{ asset('images/'. $word->img) }}" class="img-fluid img-thumbnail" alt="Aqui va una imagen" style="max-width: 400px;">   
+                        <img src="{{ asset('images/'. $word->img) }}" class="img-fluid img-thumbnail" alt="Aqui va una imagen" style="max-width: 400px;">
                     </td>
 
                     <td class="align-middle">{{$word->palabra}}</td>
@@ -69,7 +69,7 @@
             @endif
 
           </div>
-        </div>        
+        </div>
       </div>
     </div>
   </div>

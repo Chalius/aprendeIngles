@@ -49,6 +49,9 @@ Route::get('/nosotros','MainController@nosotros');
 
 	Route::post('aprendido','AprendidasController@store');
 
+
+	Route::post('practice','EjerciciosController@practice');
+
 #FIN APRENDER
 
 

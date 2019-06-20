@@ -73,9 +73,7 @@ class User extends Authenticatable
         return $this->embedsMany('App\Aprendidas');
     }
 
-    public function userachievement(){
-      return $this->embedsMany('App\Userachievement');
-    }
+
 
 
 }
