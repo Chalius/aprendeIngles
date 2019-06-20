@@ -61,6 +61,7 @@
               </tbody>
               @endforeach
             </table>
+            <?php echo $words->render() ?>
           </div>
         </div>
       </div>
