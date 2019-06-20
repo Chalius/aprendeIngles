@@ -69,7 +69,7 @@ class DictionaryController extends Controller
         return view('aprender.aprendePalabras', ['dictionary' => Dictionary::find($id)]);
     }
 
-<<<<<<< HEAD
+
 
     public function edit(Dictionary $dictionary)
     {
@@ -79,19 +79,19 @@ class DictionaryController extends Controller
 
 
     public function update(Request $request, Dictionary $dictionary)
-=======
- 
+
+
     public function edit($id)
     {
         $word = Dictionary::find($id);
         #FALTA EDITAR
         return view('administrar.editar')->with('word',$word);
-        
+
     }
 
-  
+
     public function update(Request $request, $id)
->>>>>>> origin/master
+
     {
         $request->validate([
             'palabra' => 'required:max20' ,
