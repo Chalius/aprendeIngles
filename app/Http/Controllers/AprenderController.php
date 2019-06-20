@@ -27,8 +27,8 @@ class AprenderController extends Controller
     };
 
 
-    $words=Dictionary::whereNotIn('_id',$arrayIds)->get();
-
+    $words=Dictionary::whereNotIn('_id',$arrayIds)->paginate(4);
+    #previamente tenia el metodo ->get()
 
 
     return view('aprender.aprenderPalabras',compact('words'));

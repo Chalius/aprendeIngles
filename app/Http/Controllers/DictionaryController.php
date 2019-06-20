@@ -122,7 +122,7 @@ class DictionaryController extends Controller
 
     public function listar(Dictionary $dictionary)
     {
-        $words = Dictionary::all();
+        $words = Dictionary::paginate(4);
         return view('administrar.listar', compact('words'));
 
     }

@@ -47,6 +47,7 @@
               </tbody>
               @endforeach
             </table>
+            <?php echo $words->render() ?>
 
             {{-- formulario para el boton "aprendido!""--}}
               <?php
@@ -67,6 +68,7 @@
             @else
               <h3>Ya no quedan más palabras para estudiar :o</h3>
             @endif
+
 
           </div>
         </div>        
