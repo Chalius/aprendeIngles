@@ -2,54 +2,69 @@
 @extends('layouts.admi')
 
 @section('content')
-
-<div class="container">
-	<div class="row justify-content-center"> 
-		<div class="col-md-12">
-	
-			<div class="page-header">
-				<h1 class="text-center">
-					Bienvenido administrador! <small>Utiliza esta interfaz para modificar las palabras disponibles en la aplicacion</small>
-				</h1>
-				<p></p>
-			</div>
-
-			<div>
-				<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="rounded" />
-				<hr>
-					<table class="table table-hover" >
-					      <thead class="thead-light">
-					        <th>Imagen</th>
-					        <th>Ingles</th>
-					        <th>Traducción</th>
-					        <th>Pronunciación</th>
-					        <th>Mnemotecnia</th>
-					        <th>Accion</th>
-
-					      </thead>
-					      @foreach($words as $word)
-					        <tbody>
-					          <td><img src="{{ asset('images/'. $word->img) }}" class="img-fluid" alt="Aqui va una imagen"></td>
-					          <td>{{$word->palabra}}</td>
-					          <td>{{$word->traduccion}}</td>
-					          <td>{{$word->pronunciacion}}</td>
-					          <td>{{$word->nemotecnia}}</td>
-					          <td>
-					          	<form action="{{ action('DictionaryController@destroy', $word->id) }}" method="POST">
-		
-									@csrf
-							        @method('DELETE')
-							        <button class="btn btn-danger float-right" type="submit">Eliminar</button>
-
-					          	</form>
-					          </td>
+<div class="py-5 text-center" style="background-image: url({{URL::asset('webimages/primer.png')}});background-size:cover;" >
 
 
-					        </tbody>
-					      @endforeach
-					  </table>
-			</div>
-		</div>
-	</div>
-</div>
+    <div class="container">
+      <div class="row">
+        <div class="bg-white p-5 mx-auto col-md-8 col-10">
+          <h3 class="display-3">Lista de resultados</h3>
+          <p class="mb-4">A continuacion se mostraran todos los resultados de las palabras almacenadas en la base de datos. En caso se desee borrar un elemento acceder a los botones implementados en la lista. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped table-hover" style="text-align: center">
+
+              <thead>
+                <tr class="table-secondary">
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Ingles</th>
+                  <th scope="col">Traducción</th>
+                  <th scope="col">Pronunciación</th>
+                  <th scope="col">Nemotecnia</th>
+                  <th scope="col">Accion</th>
+                </tr>
+              </thead>
+
+              @foreach($words as $word)
+              <tbody>
+                
+             
+                <tr>
+                    <td class="w-25">
+                        <img src="{{ asset('images/'. $word->img) }}" class="img-fluid img-thumbnail" alt="Aqui va una imagen" style="max-width: 400px;">   
+                    </td>
+
+                    <td class="align-middle">{{$word->palabra}}</td>
+                    <td class="align-middle">{{$word->traduccion}}</td>
+                    <td class="align-middle">{{$word->pronunciacion}}</td>
+                    <td class="align-middle">{{$word->nemotecnia}}</td>
+                    <td class="align-middle">
+                        <a href="/administrar/{{$word->id}}/edit" class="btn btn-outline-primary ">Editar</a>
+                        <p></p>
+                        <hr>
+                        <form action="{{ action('DictionaryController@destroy', $word->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-secondary" type="submit">Eliminar</button>
+                        </form>
+
+                    </td>
+                </tr>
+
+              </tbody>
+              @endforeach
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 @endsection

@@ -34,7 +34,7 @@
 
                       <a class="nav-link text-dark" href="{{ url('/aprender/ejercicios') }}">Ejercicios </a>
 
-                      <a class="nav-link text-dark" href="{{url('/aprender/examenes')}}">Exámenes </a>
+                      <a class="nav-link text-dark" href="{{url('/aprender/examenes')}}">Buscar </a>
 
                       <a class="nav-link text-dark" href="{{url('/aprender/loAprendido')}}">Lo aprendido </a>
                   </div>
