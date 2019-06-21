@@ -57,10 +57,15 @@ class AprenderController extends Controller
       array_push($arrayApren,$aprendida);
     }
 
-    $random=$arrayApren[array_rand($arrayApren)];#random es un array con campos de 1 palabra
+    if(!empty($arrayApren)){
+        $random=$arrayApren[array_rand($arrayApren)];#random es un array con campos de 1 palabra
+        return view('aprender.ejercicios')->with('random',$random);
+    }
+    return view('aprender.ejercicios');
 
 
-    return view('aprender.ejercicios')->with('random',$random);
+
+
     #return view('aprender.ejercicios');
   }
 

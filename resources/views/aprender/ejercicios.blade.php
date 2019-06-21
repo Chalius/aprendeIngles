@@ -40,7 +40,8 @@
                   @isset($random)
                     <h2>Palabra: {{$random->palabra}}</h2>
                     <input id="random" type="text" class="form-control{{ $errors->has('palabra') ? ' is-invalid' : '' }}" name="randomtra" value="{{ $random->traduccion }}" style="display:none" autofocus/>
-
+                  @else
+                    <h4>Todavia no tienes palabras para estudiar.</h4>
                   @endisset
 
 
